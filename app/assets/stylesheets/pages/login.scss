@@ -2,3 +2,11 @@
   color: $white;
   font-size: 3em;
 }
+
+.actions { 
+  display: inline-block; 
+  vertical-align: middle;
+  margin-left: 14px;
+}
+
+.check-field { color: $white }

@@ -11,12 +11,13 @@
         = f.label :password, id: 'login-label-b'
         = f.password_field :password, autocomplete: "off", id: 'login-textbox-b'
 
+      .actions
+        = f.submit "Log in", class: 'button -blue btn-width'
+
       - if devise_mapping.rememberable?
-        .field
+        .check-field
           = f.check_box :remember_me
           = f.label :remember_me
 
-      .actions
-        = f.submit "Log in"
 
     = render "devise/shared/links"
