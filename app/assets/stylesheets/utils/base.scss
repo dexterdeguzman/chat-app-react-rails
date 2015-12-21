@@ -1,4 +1,7 @@
-body, html { background-color: $main-background-color }
+body, html { 
+  background-color: $main-background-color;
+  height: 100%;
+}
 
 .con {
   margin: 0 auto;

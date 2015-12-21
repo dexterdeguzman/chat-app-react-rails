@@ -3,8 +3,8 @@
   = render 'shared/meta'
 
   %body
-    = render 'shared/navbar'
-    = yield
-    = debug(params)
+    .login-wrap
+      = render 'shared/navbar'
+      = yield
 
   = javascript_include_tag 'application', 'data-turbolinks-track' => true

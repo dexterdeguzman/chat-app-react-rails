@@ -1,0 +1,46 @@
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.85em;
+  }
+
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 100%;
+    border: 2px solid $green;
+
+    @include transition(all 0.33s cubic-bezier(.33,0,.2,1));
+  }
+
+  &:focus + label:before,
+  &:hover + label:before {
+    background: $green;
+  }
+
+  &:checked + label:before { background: $green }
+
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 13px;
+    background: $white;
+    height: 4px;
+    width: 4px;
+
+    @include box-shadow((6px 0 0 $white, 3px 0 0 $white, 6px -9px 0 $white, 6px -3px 0 $white, 6px -6px 0 $white)); 
+    @include transform(rotate(45deg));
+    @include transition(all 0.33s cubic-bezier(.33,0,.2,1));
+  }
+}

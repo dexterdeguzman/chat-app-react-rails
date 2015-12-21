@@ -1,3 +1,5 @@
+.login-wrap { height: 100% }
+
 .login-head {
   color: $white;
   font-size: 3em;
@@ -9,4 +11,21 @@
   margin-left: 14px;
 }
 
-.check-field { color: $white }
+.check-field { 
+  color: $white; 
+  margin-bottom: 35px;
+}
+
+.signup-link{ 
+  color: $light-blue;  
+  font-weight: 700;
+
+  &:hover { color: (darken($light-blue, 10%)) }
+}
+
+.forgot-password-link {
+  font-size: 0.85em;
+  color: $light-blue;
+
+  &:hover { color: (darken($light-blue, 10%)) }
+}
