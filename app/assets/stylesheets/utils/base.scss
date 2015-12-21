@@ -1,0 +1,12 @@
+body, html { 
+  background-color: $main-background-color;
+  height: 100%;
+}
+
+.con {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 98%;
+
+  &.navbar-con { padding: 14px }
+}

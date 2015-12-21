@@ -1,0 +1,19 @@
+.button {
+  border-radius: 4px;
+  padding: 7px;
+  text-align: center;
+
+  &.-blue {
+    background-color: $light-blue; 
+    border: none;
+    color: $white;
+
+    @include transition(all 0.33s cubic-bezier(.33,0,.2,1));
+  }
+
+  &.-blue:hover { background-color: darken($light-blue, 10%) }
+
+  &:hover { outline: none  }
+
+  &.btn-width { width: 100px  }
+}

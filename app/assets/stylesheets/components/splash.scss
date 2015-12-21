@@ -1,0 +1,10 @@
+.splash {
+  
+  &.login-splash {
+    background: linear-gradient(rgba($blue, 0.5), rgba($blue,0.5)), asset-url('city.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+
+    @extend .clearfix;
+  }
+}

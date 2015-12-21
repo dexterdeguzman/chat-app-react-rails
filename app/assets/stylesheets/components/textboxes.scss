@@ -1,0 +1,39 @@
+.login-input{
+  display: inline-block;
+  height: 70px;
+  position: relative;
+  width: 300px;
+
+  label{
+    top: 28px;
+    color: $white;    
+    font-size: 1.2em;
+    left: 7px;
+    position: absolute;    
+
+    @include transition(all 0.33s cubic-bezier(.33,0,.2,1));
+  }
+
+  label.active{
+    color: $pink;
+    font-size: 0.9em;
+    left: 0;
+    top: 0;
+  }
+
+  input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $pink;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    height: 50px;
+    width: 100%;
+  }
+
+  &.last-child { margin-left: 14px }
+} 
+
+.login-input > input:focus { outline: none }

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+%html
+  = render 'shared/meta'
+
+  %body
+    .login-wrap
+      = render 'shared/navbar'
+      = yield
+
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true

@@ -1,0 +1,22 @@
+.splash.login-splash
+  .con.main-con
+    %h1.login-head Log in
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .login-input
+        = f.label :email, id: 'login-label-a'
+        = f.email_field :email, autofocus: true, id: 'login-textbox-a'
+
+      .login-input.last-child
+        = f.label :password, id: 'login-label-b'
+        = f.password_field :password, autocomplete: "off", id: 'login-textbox-b'
+
+      .actions
+        = f.submit "Log in", class: 'button -blue btn-width'
+
+      - if devise_mapping.rememberable?
+        .check-field
+          = f.check_box :remember_me, class: 'styled-checkbox'
+          = f.label :remember_me
+
+    = render "users/shared/links"
