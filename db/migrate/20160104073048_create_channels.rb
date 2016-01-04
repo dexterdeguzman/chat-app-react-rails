@@ -3,6 +3,7 @@ class CreateChannels < ActiveRecord::Migration
     create_table :channels do |t|
 
       t.timestamps null: false
+      t.string :name
     end
   end
 end
