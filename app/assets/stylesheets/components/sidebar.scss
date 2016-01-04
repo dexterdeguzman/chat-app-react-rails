@@ -1,0 +1,12 @@
+.sidebar-con {
+  background-color: $blue;
+
+  a { color: $green }
+
+  ul { 
+    list-style: none;  
+    color: $white;
+    margin-top: 21px;
+    padding: 0;
+  }
+}

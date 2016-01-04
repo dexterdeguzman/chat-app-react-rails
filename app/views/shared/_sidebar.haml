@@ -1,0 +1,7 @@
+.col-md-2.sidebar-con
+  = link_to 'Create Channel', '#'
+  = link_to 'Logout', destroy_user_session_path, method: "delete"
+
+  - @channel.each do |channel|
+    %ul.channel-list
+      %li= link_to channel.name, '#'
