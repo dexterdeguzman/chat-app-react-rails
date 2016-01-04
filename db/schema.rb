@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208063516) do
+ActiveRecord::Schema.define(version: 20160104074114) do
+
+  create_table "channels", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+  end
+
+  create_table "channels_users", id: false, force: :cascade do |t|
+    t.integer "channel_id"
+    t.integer "user_id"
+  end
+
+  add_index "channels_users", ["channel_id", "user_id"], name: "index_channels_users_on_channel_id_and_user_id"
+  add_index "channels_users", ["user_id", "channel_id"], name: "index_channels_users_on_user_id_and_channel_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
