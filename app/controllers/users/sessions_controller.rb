@@ -3,9 +3,9 @@ class Users::SessionsController < Devise::SessionsController
   layout 'login'
 
   # GET /resource/sign_in
-   def new
-     super
-   end
+  # def new
+  #   super
+  # end
 
   # POST /resource/sign_in
   # def create
