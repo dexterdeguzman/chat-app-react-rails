@@ -1,10 +1,12 @@
 .col-md-2.sidebar-con
-  = link_to "#" do
+  = link_to new_channel_path do
     %i.ion-android-add
     Create Channel
   = link_to "Logout", destroy_user_session_path, method: "delete"
 
+  Channels I Joined
   %ul.channel-list
-    - @channel.each do |channel|
-      %li= link_to channel.name, '#'
+    - @channels.each do |channels|
+      %li= link_to channels.name, '#'
+  My Channels
 

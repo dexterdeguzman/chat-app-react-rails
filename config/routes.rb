@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
+  resources :channels
+
   authenticated :user do
     root 'home#index', as: :authenticated_root
   end

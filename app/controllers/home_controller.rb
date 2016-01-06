@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @channel = Channel.all
+    @channel = current_user.channels
   end
 end
