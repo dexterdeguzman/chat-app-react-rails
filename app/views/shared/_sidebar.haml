@@ -9,4 +9,7 @@
     - @channels.each do |channels|
       %li= link_to channels.name, '#'
   My Channels
+  %ul.channel-list
+    - @mychannels.each do |my_channels|
+      %li= link_to my_channels.name, '#'
 
